@@ -1,6 +1,11 @@
 <div>
-    <h3 class="title is-4 mb-2">{{ post.ip }}</h3>
-    <p class="mb-2">{{ post.comment }}</p>
-    <small>{{ post.createdAt | format_datetime('full', 'none') }}</small>
+    <h3 class="post title is-4 mb-2">{{ post.ip }}</h3>
+    <p>{{ post.comment }}</p>
+    <div class="flex-image mt-2">
+        {% if post.imageName %}
+            <img src="{{ vich_uploader_asset(post) }}" alt="Image" class="post-image">
+        {% endif %}
+        <small>{{ post.createdAt | format_datetime('full', 'none') }}</small>
+    </div>
     <hr>
 </div>

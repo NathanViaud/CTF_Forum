@@ -7,7 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class PostType extends AbstractType
 {
@@ -19,6 +19,17 @@ class PostType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Type your comment here...',
                     'class' => 'textarea mb-3'
+                ]
+            ])
+            ->add('imageFile', VichImageType::class, [
+                'label' => 'Image:',
+                'required' => false,
+                'allow_delete' => true,
+                'delete_label' => 'Delete image',
+                'image_uri' => true,
+                'download_uri' => false,
+                'attr' => [
+                    'class' => 'mb-3'
                 ]
             ])
         ;

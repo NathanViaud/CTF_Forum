@@ -24,7 +24,7 @@ class PostController extends AbstractController
     public function index(): Response
     {
         return $this->render('post/index.html.twig', [
-            'posts' => $this->repo->findAll(),
+            'posts' => $this->repo->findAllOrderedByNewest()
         ]);
     }
 
