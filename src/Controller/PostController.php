@@ -37,7 +37,7 @@ class PostController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
-            $post->setIp('salut les loosers');
+            $post->setIp($request->getClientIp());
             $post->setCreatedAt(new \DateTimeImmutable());
 
             $this->em->persist($post);
