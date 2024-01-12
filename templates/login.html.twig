@@ -6,13 +6,13 @@
     <section class="card form">
         <div class="card-content">
             <form action="{{ path('app.login') }}" method="POST" class="content">
-                <h1 class="form-title">Connexion</h1>
+                <h2 class="form-title title is-2">Connexion</h2>
                 {% if error %}
                     <div class="notification is-danger is-light" role="alert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
                 <div class="field">
                     <p class="control has-icons-left">
-                        <input class="input" type="text" name="_username" id="_username" placeholder="Username" required>
+                        <input class="input is-medium" type="text" name="_username" id="_username" placeholder="Username" required>
                         <span class="icon is-small is-left">
                             <i class="fa fa-user"></i>
                         </span>
@@ -20,7 +20,7 @@
                 </div>
                 <div class="field">
                     <p class="control has-icons-left">
-                        <input class="input" type="password" name="_password" id="_password" placeholder="Password" required>
+                        <input class="input is-medium" type="password" name="_password" id="_password" placeholder="Password" required>
                         <span class="icon is-small is-left">
                             <i class="fas fa-lock"></i>
                         </span>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="field">
                     <p class="control">
-                        <button type="submit" class="button is-success">
+                        <button type="submit" class="button is-success is-medium">
                             Login
                         </button>
                     </p>

@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    New post |
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <section class="form card">
+        <a href="{{ path('app.posts.index') }}" class="button back">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="card-content generated-form">
+            <h2 class="form-title title is-2">New post</h2>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <div class="text-center">
+                <button type="submit" class="button is-primary is-medium">{{ buttonLabel|default('Save') }}</button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </section>
+{% endblock %}
