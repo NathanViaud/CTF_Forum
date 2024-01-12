@@ -8,7 +8,7 @@ use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/admin', name: 'app.admin')]
+#[Route('/admin', name: 'admin')]
 class AdminController extends AbstractController
 {
 

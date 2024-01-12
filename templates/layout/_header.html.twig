@@ -1,0 +1,18 @@
+<nav class="navbar m-2" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ path('app.posts.index') }}">
+      <h2 class="title is-2">Step Devs Forum</h2>
+    </a>
+  </div>
+
+  <div class="buttons">
+
+    {% if not app.user %}
+        <a href="{{ path('app.login') }}" class="button is-primary">Log in</a>
+    {% else %}
+        <a href="{{ path('app.logout') }}" class="button is-danger is-light">Log out</a>
+        <a href="{{ path('admin.flag') }}" class="button is-link is-light">View flag</a>
+    {% endif %}
+  </div>
+
+</nav>

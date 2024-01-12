@@ -1,4 +1,8 @@
-body {
+/*body {*/
+/*    padding: 3rem;*/
+/*}*/
+
+.content {
     padding: 3rem;
 }
 
@@ -38,4 +42,12 @@ body {
     flex-direction: column;
     width: fit-content;
     gap: 1rem;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar-brand {
+    flex: 1;
 }
