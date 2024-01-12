@@ -1,0 +1,12 @@
+body {
+    padding: 3rem;
+}
+
+.form {
+    max-width: 36rem;
+    margin: auto;
+}
+
+.form-title {
+    text-align: center;
+}
