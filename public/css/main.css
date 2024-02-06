@@ -51,3 +51,12 @@
 .navbar-brand {
     flex: 1;
 }
+
+.navbar-brand > .navbar-item {
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-brand > .navbar-item:hover {
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.1) !important;
+}
