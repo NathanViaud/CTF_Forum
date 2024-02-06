@@ -43,7 +43,7 @@ class PostController extends AbstractController
             $this->em->persist($post);
             $this->em->flush();
 
-            $this->addFlash('success', 'Post créé avec succès');
+            $this->addFlash('success', 'Post created successfully!');
 
             return $this->redirectToRoute('app.posts.index');
         }
